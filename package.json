@@ -1,0 +1,17 @@
+{
+	"main": "app.js",
+	"scripts": {
+		"start": "node app.js"
+	},
+	"dependencies": {
+		"express": "4.16.4",
+		"express-xml-bodyparser": "0.3.0",
+		"request": "2.88.0",
+		"request-promise-native": "^1.0.7",
+		"saucelabs": "2.2.0",
+		"uuid": "3.3.2"
+	},
+	"engines": {
+		"node": ">=10"
+	}
+}
