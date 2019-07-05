@@ -11,13 +11,13 @@ exports = module.exports = {
         /*
         ?interval=1h&start=2017-03-01T12:00:00Z&end=2017-03-02T12:00:00Z&os=Linux&pretty
         */
-       var request = new XMLHttpRequest();
+/*       var request = new XMLHttpRequest();
         request.onreadystatechange = function(){
             if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
                 console.log(xmlHttp.responseText);
         }
         xmlHttp.open("GET", sauceUrl, true); // true for asynchronous 
-        xmlHttp.send(null);
+        xmlHttp.send(null);*/
         
     }
 }
