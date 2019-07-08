@@ -6,6 +6,7 @@
 	"dependencies": {
 		"express": "4.16.4",
 		"express-xml-bodyparser": "0.3.0",
+		"https": "^1.0.0",
 		"request": "2.88.0",
 		"request-promise-native": "^1.0.7",
 		"saucelabs": "2.2.0",
@@ -13,5 +14,8 @@
 	},
 	"engines": {
 		"node": ">=10"
+	},
+	"devDependencies": {
+		"got": "^9.6.0"
 	}
 }

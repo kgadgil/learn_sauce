@@ -1,15 +1,28 @@
 'use strict';
 
 const app = require('express')();
+const bodyParser = require('body-parser');
 const saucelabs = require('./saucelabs.js');
 const port = 3000;
-app.get('/', (req, res) => res.send('Hello World!'))
 
-/*app.listen(port, () => console.log(`Example app listening on port ${port}!`));*/
-app.get('/', function(request, response) {
-    response.send("Say nice");
-  });
-saucelabs.init();
+app.use(bodyParser.json());
+
+//saucelabs.init();
+
+app.get('/', function (request, response) {
+	//response.send('Hello World!');
+	(async () => {
+    try {
+        const response = await got('sindresorhus.com');
+        console.log(response.body);
+        //=> '<!doctype html> ...'
+    } catch (error) {
+        console.log(error.response.body);
+        //=> 'Internal server error ...'
+    }
+})();
+});
+
 app.listen(port, function(error) {
     if (error) {
       console.log(error);

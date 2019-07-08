@@ -1,23 +1,20 @@
-'use strict';
-const http = require('http');
-const SauceLabs = require('saucelabs').default;
+/*var request = require('request');
 
 exports = module.exports = {
-	async init () {
-        let username = process.env.SAUCE_USERNAME;
-        let accessKey = process.env.SAUCE_ACCESS_KEY;
-        var token;
-        var sauceUrl = "https://saucelabs.com/rest/v1/analytics/trends/tests";
-        /*
-        ?interval=1h&start=2017-03-01T12:00:00Z&end=2017-03-02T12:00:00Z&os=Linux&pretty
-        */
-/*       var request = new XMLHttpRequest();
-        request.onreadystatechange = function(){
-            if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-                console.log(xmlHttp.responseText);
-        }
-        xmlHttp.open("GET", sauceUrl, true); // true for asynchronous 
-        xmlHttp.send(null);*/
-        
+  init(){
+    let username = process.env.SAUCE_USERNAME;
+    let accessKey = process.env.SAUCE_ACCESS_KEY;
+    var options = {
+      url: 'https://${username}:${accessKey}@saucelabs.com/rest/v1/users/YOUR_SAUCE_USERNAME'
+    };
+
+    function callback(error, response, body) {
+      if (!error && response.statusCode == 200){
+        console.log(body);
+      }
     }
-}
+
+    request(options, callback);
+
+  }
+}*/
